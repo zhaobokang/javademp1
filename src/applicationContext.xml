@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+<!-- 注入（配置，植入，织入）Usb设备实现类 -->
+<!-- 
+  id="注入以后的对象名称"、
+  class="注入以后的对象类型"
+  name="注入以后的对象的属性名称"
+  value="注入以后的对象的属性值"
+ -->
+<!-- <bean id="usbDev" class="com.biz.UsbDisk">
+   set注入属性
+ <property name="uname" value="金士顿U盘"></property>
+</bean> -->
+<bean id="usbDev" class="com.biz.UsbDisk">
+  <!-- 构造注入 index代表构造函数参数位置顺序  -->
+ <constructor-arg index="0" value="金士顿"/>
+ <constructor-arg index="1" value="1"/>
+</bean>
+<bean id="usbDev1" class="com.biz.UsbDisk">
+  <!-- 构造注入 index代表构造函数参数位置顺序  -->
+ <constructor-arg index="0" value="金士顿"/>
+ <constructor-arg index="1" value="1"/>
+</bean>
+</beans>	
+	
+	
